@@ -1,0 +1,47 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	align-items: center;
+	justify-content: center;
+	background: #000;
+	min-height: 100vh;
+	display: flex;
+}
+h1
+{
+	position: relative;
+	font-size: 8em;
+	color: #222;
+	text-transform: uppercase;
+	border-bottom: 	16px solid #222;
+	letter-spacing: 0.05em;
+	line-height: 1.2em;
+}
+h1:before
+{
+	content: attr(data-text);
+	top: 0;
+	left: 0;
+	border-bottom: 	16px solid #0B90F8;
+	color: #0B90F8;
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	animation: text-animate 10s linear infinite;
+}
+@keyframes text-animate
+{
+	0%
+	{
+		width: 0%;
+	}
+	100%
+	{
+		width: 100%;
+	}
+}
